@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- import jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body id="bg" class="light-theme">
+
+  <nav>
+    <div class="difficulty">
+      <span>Difficulty:</span>
+      <button data-difficulty="easy">Easy</button>
+      <button data-difficulty="medium">Medium</button>
+      <button data-difficulty="hard">Hard</button>
+    </div>
+    <span>|</span>
+    <div class="controls">
+      <button id="start-btn">Start</button>
+      <button id="reset-btn">Reset</button>
+      <button id="power-btn">Powerup</button>
+      <button id="theme-btn">Theme</button>
+    </div>
+  </nav>
+  <div class="status">
+    <div class="status_item">
+      <span>Time:</span>
+      <span id="timer">--</span>
+    </div>
+    <div class="status_item">
+      <span>Clicks:</span>
+      <span id="clicks">0</span>
+    </div>
+    <div class="status_item">
+      <span>Matched:</span>
+      <span id="matched">0</span>
+    </div>
+    <div class="status_item">
+      <span>Pairs left:</span>
+      <span id="remaining">0</span>
+    </div>
+    <div class="status_item">
+      <span>Total Pairs:</span>
+      <span id="total">0</span>
+    </div>
+  </div>
+  <div id="game_grid" class="easy"></div>
+  <script src="index.js"></script>
+</body>
+
+</html>
