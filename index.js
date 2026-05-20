@@ -248,6 +248,7 @@ async function startGame() {
   document.getElementById('total').textContent = currentDifficulty.pairs;
   updateClicks();
   updateRemaining();
+  updateMatched();
 
   clearInterval(timerInterval);
 
