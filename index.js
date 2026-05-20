@@ -43,7 +43,6 @@ async function fetchPokemonDetail(url) {
     data.sprites?.other?.["official-artwork"]?.front_default ||
     data.sprites?.front_default ||
     null;
-  console.log(data);
   return { name: data.name, image };
 }
 
@@ -164,10 +163,8 @@ function setup() {
 
   $(".card").on("click", function () {
 
-    // prevent double clicking while waiting
     if (lockBoard) return;
 
-    // prevent clicking same card twice
     if ($(this).hasClass("flip")) return;
 
     $(this).toggleClass("flip");
@@ -183,11 +180,7 @@ function setup() {
 
       secondCard = $(this).find(".front_face")[0];
 
-      // MATCH
       if (firstCard.src === secondCard.src) {
-
-
-        console.log("match");
 
         $(`#${firstCard.id}`).parent().off("click");
         $(`#${secondCard.id}`).parent().off("click");
@@ -213,8 +206,6 @@ function setup() {
         secondCard = undefined;
 
       } else {
-
-        console.log("no match");
 
         lockBoard = true;
 
